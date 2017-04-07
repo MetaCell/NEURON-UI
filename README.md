@@ -6,35 +6,51 @@
 
 This repository hosts an experimental prototype for a new user interface for [NEURON](http://www.neuron.yale.edu/neuron/) based on web technologies. 
 
-To install:
+
+![Screenshot](https://dl.dropboxusercontent.com/u/7538688/Don%27t%20delete%2C%20used%20in%20wikis%20etc/release034.png)
+
+#### Install using Docker (self-contained, the simplest)
+
+##### Using Kitematic
+Open [Kitematic](https://kitematic.com/): search for neuron-ui and create the container.
+
+![Image](https://dl.dropboxusercontent.com/u/7538688/Don%27t%20delete%2C%20used%20in%20wikis%20etc/neuronuiImage.png)
+
+Start the container and click on Web preview to launch it. No need to ever use the command line, enjoy!
+
+![Kitematic](https://dl.dropboxusercontent.com/u/7538688/Don%27t%20delete%2C%20used%20in%20wikis%20etc/kitematic.png)
+
+##### From command line 
+```
+docker pull metacell/neuron-ui
+docker run -it -p 8888:8888 metacell/neuron-ui
+```
+Open your browser and connect to http://localhost:8888/geppetto.
+
+
+#### Install using pip
 ```
 pip install neuron_ui
 jupyter nbextension enable --py jupyter_geppetto
-```
-
-To install from source:
-```
-git clone https://github.com/MetaCell/NEURON-UI.git
-python utilities/install.py
-```
-
-To run:
-```
 NEURON-UI
 ```
 
-To update from sources:
+#### Install from sources (essentially for developers)
+```
+git clone https://github.com/MetaCell/NEURON-UI.git
+cd utilities
+python install.py
+cd ..
+./NEURON-UI
+```
+##### To update sources:
 ```
 python update.py
 ```
 
-![Screenshot](https://dl.dropboxusercontent.com/u/7538688/Don%27t%20delete%2C%20used%20in%20wikis%20etc/release034.png)
-
 The available functionality is currently limited to the RunControl panel, a basic cell builder, a simplified point process manager that lets you inject a current clamp and space plot functionality.
 
-<p align="center">
-  <img src="https://dl.dropboxusercontent.com/u/7538688/Don%27t%20delete%2C%20used%20in%20wikis%20etc/Screen_Shot_2016-06-15_at_18.06.16.png" alt="Old RunControl panel" height="300"/>
-</p>
+![oldNEURON](https://dl.dropboxusercontent.com/u/7538688/Don%27t%20delete%2C%20used%20in%20wikis%20etc/Screen_Shot_2016-06-15_at_18.06.16.png)
 
 This prototype is being developed in collaboration with the [Neurosim Lab](http://neurosimlab.org/) and the [Sense Lab](https://senselab.med.yale.edu/).
 
