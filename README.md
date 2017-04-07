@@ -1,3 +1,5 @@
+
+[![Build Status](https://travis-ci.org/MetaCell/NEURON-UI.svg?branch=master)](https://travis-ci.org/MetaCell/NEURON-UI)
 [![Docker Automated buil](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/metacell/neuron-ui/)
 
 # NEURON-UI
