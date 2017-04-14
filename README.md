@@ -35,7 +35,7 @@ jupyter nbextension enable --py jupyter_geppetto
 NEURON-UI
 ```
 
-#### Install from sources (essentially for developers)
+#### Install from sources (for developers and for using your own NEURON models)
 ```
 git clone https://github.com/MetaCell/NEURON-UI.git
 cd utilities
