@@ -7,18 +7,18 @@
 This repository hosts an experimental prototype for a new user interface for [NEURON](http://www.neuron.yale.edu/neuron/) based on web technologies. 
 
 
-![Screenshot](https://dl.dropboxusercontent.com/u/7538688/Don%27t%20delete%2C%20used%20in%20wikis%20etc/release034.png)
+![Screenshot](https://github.com/tarelli/bucket/raw/master//release034.png)
 
 #### Install using Docker (self-contained, the simplest)
 
 ##### Using Kitematic
 Open [Kitematic](https://kitematic.com/): search for neuron-ui and create the container.
 
-![Image](https://dl.dropboxusercontent.com/u/7538688/Don%27t%20delete%2C%20used%20in%20wikis%20etc/neuronuiImage.png)
+![Image](https://github.com/tarelli/bucket/raw/master//neuronuiImage.png)
 
 Start the container and click on Web preview to launch it. No need to ever use the command line, enjoy!
 
-![Kitematic](https://dl.dropboxusercontent.com/u/7538688/Don%27t%20delete%2C%20used%20in%20wikis%20etc/kitematic.png)
+![Kitematic](https://github.com/tarelli/bucket/raw/master//kitematic.png)
 
 ##### From command line 
 ```
@@ -50,7 +50,7 @@ python update.py
 
 The available functionality is currently limited to the RunControl panel, a basic cell builder, a simplified point process manager that lets you inject a current clamp and space plot functionality.
 
-![oldNEURON](https://dl.dropboxusercontent.com/u/7538688/Don%27t%20delete%2C%20used%20in%20wikis%20etc/Screen_Shot_2016-06-15_at_18.06.16.png)
+![oldNEURON](https://github.com/tarelli/bucket/raw/master/Screen_Shot_2016-06-15_at_18.06.16.png)
 
 This prototype is being developed in collaboration with the [Neurosim Lab](http://neurosimlab.org/) and the [Sense Lab](https://senselab.med.yale.edu/).
 
