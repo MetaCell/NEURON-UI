@@ -41,7 +41,7 @@ subprocess.call(['pip', 'install', '-e', '.'], cwd='../org.geppetto.frontend.jup
 print("Installing jupyter_geppetto Jupyter Extension ...")
 subprocess.call(['jupyter', 'nbextension', 'install', '--py', '--symlink', '--user', 'jupyter_geppetto'], cwd='../org.geppetto.frontend.jupyter')
 subprocess.call(['jupyter', 'nbextension', 'enable', '--py', '--user', 'jupyter_geppetto'], cwd='../org.geppetto.frontend.jupyter')
-subprocess.call(['jupyter', 'nbextension', 'enable', '--py', 'widgetsnbextension'], cwd='../org.geppetto.frontend.jupyter')
+# subprocess.call(['jupyter', 'nbextension', 'enable', '--py', 'widgetsnbextension'], cwd='../org.geppetto.frontend.jupyter')
 subprocess.call(['jupyter', 'serverextension', 'enable', '--py', 'jupyter_geppetto'], cwd='../org.geppetto.frontend.jupyter')
 
 print("Installing neuron_ui python package ...")
