@@ -1,7 +1,7 @@
 FROM jupyter/base-notebook:eb70bcf1a292
 USER root
 
-ARG neuronuiBranch=development
+ARG neuronuiBranch=polishingDockerfile
 ENV neuronuiBranch=${neuronuiBranch}
 RUN echo "$neuronuiBranch";
 
@@ -21,7 +21,8 @@ RUN apt-get install -y \
         libpython-dev \
         cython \
         git-core \
-        unzip 
+        unzip \
+        libpng-dev
 USER $NB_USER
 
 RUN conda create --name snakes python=2
@@ -33,14 +34,15 @@ RUN /bin/bash -c "source activate snakes && make"
 RUN /bin/bash -c "source activate snakes && make install"
 WORKDIR src/nrnpython
 RUN /bin/bash -c "source activate snakes && python setup.py install"
-WORKDIR ~/work
+
+WORKDIR ../../..
 RUN wget https://github.com/MetaCell/NEURON-UI/archive/$neuronuiBranch.zip
 RUN unzip $neuronuiBranch.zip
 WORKDIR NEURON-UI-$neuronuiBranch/utilities
 RUN /bin/bash -c "source activate snakes && python --version"
 RUN /bin/bash -c "source activate snakes && exec python install.py"
 RUN cd ../neuron_ui/tests && /bin/bash -c "source activate snakes && python -m unittest netpyne_model_interpreter_test"
-WORKDIR ~/work
+WORKDIR ../..
 RUN mkdir workspace
 WORKDIR workspace
 CMD /bin/bash -c "source activate snakes && exec jupyter notebook --debug --NotebookApp.default_url=/geppetto --NotebookApp.token=''"
