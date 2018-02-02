@@ -33,6 +33,7 @@ RUN /bin/bash -c "source activate snakes && ./configure --prefix `pwd` --without
 RUN /bin/bash -c "source activate snakes && make"
 RUN /bin/bash -c "source activate snakes && make install"
 WORKDIR src/nrnpython
+ENV PATH="/home/jovyan/work/nrn-7.4/x86_64/bin:${PATH}"
 RUN /bin/bash -c "source activate snakes && python setup.py install"
 
 WORKDIR ../../..
