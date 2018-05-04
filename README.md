@@ -11,8 +11,12 @@ This repository hosts an experimental prototype for a new user interface for [NE
 
 #### Install using Docker (self-contained, the simplest)
 
-##### Using Kitematic
-Open [Kitematic](https://kitematic.com/): search for neuron-ui and create the container.
+First install [Docker from here](https://www.docker.com/community-edition).
+
+##### Install NEURON-UI using Docker graphical interface (Kitematic)
+Open Kitematic from Docker menu (will install Kitematic if you don't have it already)
+
+Search for neuron-ui and create the container.
 
 ![Image](https://github.com/tarelli/bucket/raw/master//neuronuiImage.png)
 
@@ -20,7 +24,7 @@ Start the container and click on Web preview to launch it. No need to ever use t
 
 ![Kitematic](https://github.com/tarelli/bucket/raw/master//kitematic.png)
 
-##### From command line 
+##### Install NEURON-UI using Docker from command line 
 ```
 docker pull metacell/neuron-ui
 docker run -it -p 8888:8888 metacell/neuron-ui
@@ -28,7 +32,7 @@ docker run -it -p 8888:8888 metacell/neuron-ui
 Open your browser and connect to http://localhost:8888/geppetto.
 
 
-#### Install using pip
+#### Install NEURON-UI using pip
 ```
 pip install neuron_ui
 jupyter nbextension enable --py jupyter_geppetto
